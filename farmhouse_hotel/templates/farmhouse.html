@@ -12,50 +12,206 @@
     <meta name="keywords" content="dream farmhouse, farmhouse booking">
     <meta name="author" content="Attiya Rasheed">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/627c5434aa.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
     <title>Dream Farmhouse</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+ 
+        *{
+            box-sizing:border-box;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        
+        #cover-text{
+            font-size: 130%;
+            font-family: oswald, sans-serif;
+            text-transform: capitalize;
+            letter-spacing: 4px;
+            width: 300px;
+            height:200px;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: rgba(204, 228, 23, 0.269);
+            bottom: 60px;
+            right: 150px;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .picture{
+            height: 300px;
+            width: 33%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /**-------------adjustment and styling of images in gallery.html-------------- **/
+        
+        .row. farmi {
+            display:flex;
+            column-count: 3;
+            line-height: 30px;
+            column-gap: 2px;
+            box-sizing: border-box;
+            
+            
+        }
+        .col{
+            flex: 25%;
+            padding: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        /** images style from gallery**/
+        .media {
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .media:hover{
+            opacity:0.7;
+        }
+        .picture{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-top: 30px;
+            padding-left: 300px;
+            padding-right: 300px;
+            width: 100%;
+            height:150%;
+            overflow: auto;
+            background-color:rgb(77, 231, 185);
+            background-color:rgba(77, 231, 185,0.9);
+            
+        }
+        
+        .picture-content{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        
+        }
+        
+        .cap{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding:10px 0;
+            height:150px;
+        }
+        .picture-content, .cap{
+            animation-name:zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom{
+            from{transform: scale(0.1)}
+            to{transform: 0.6}
+        }
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3;
+            
+        }
+        .close:hover,
+        .close:focus {
+            color:#bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        
+        @media only screen and (max-width:700px){
+            .picture-content{
+                width:100%
+            }
+        }
+        
+        
+        .link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        footer{
+            height: 70px;
+            background-color: aliceblue;
+            width: 100%;
+        }</style>
    
 </head>
 <body>
     <article class="container mt-3">
         <header class="header" id="header">
             <nav class="links navbar navbar-light bg-light navbar-expand-sm">
-                <a href="/farmhouse.html" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
+                <a href="#home" class="navbar-brand">Dream farmhouse <i class="fas fa-home"></i> </a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mr-auto">
                         <li class="active nav-item mr-2"><a href="#gallery">Gallery</a></li>
-                        <li class="nav-item mr-2"><a href="/booking.html">Booking</a></li>
+                        <li class="nav-item mr-2"><a href="#booking">Booking</a></li>
                         <li class="nav-item mr-2"><a href="#contact">Contact Us</a></li> 
                      </ul>
                 </div>
             </nav>
         </header>
- <section>
-           <!-- hotel booking -->
-<div class="btn-group">
-    <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Action
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div>
-  </section>
-        <section>
+        <section id="home">
             {% load static %} <img src="{% static "dj_app/media/background-image1.jpg" %}" alt="green valley with houses" class='container '/>
             
         </section>
+        <!-- hotel booking -->
+ <section id="booking">
+     <div class="row mt-2 justify-content-between">
+         <div class="filter-card">
+             <h5>Filter</h5>
+             <form action="#" >
+                 <div class="row form-group">
+                     <div class="col-md-12">
+                     <label for="mintopay">check in</label>
+                     <p>
+                         <input type="date" name="checkin" id="checkin" class="for">
+                     </p>
+
+                     </div>
+                 <div class="col-md-12">
+                     <label for="maxtopay">check out</label>
+                     <p>
+                         <input type="date" name="checkout" id="checkin" class="for">
+                     </p>
+                 </div>
+             </div>
+             <div class="row from-group">
+                 <div class="col-md-12">
+                     <label for="date-start">Price Range</label>:£
+                     <span id="price" class="price">500</span>
+                     <input type="range" min="23" max="500" value="500" class="s">
+                     <p></p>
+                 </div>
+             </div>
+             <div class row form-group>
+                 <div class="col-md-12">
+                    <button type="submit" name='submit' class="btn btn-primary" value="submit" >Submit</button>
+                 </div>
+             </div>
+         </form>
+     </div>
+ </div>
+     </section>
         <section class="farmhouse-intro">
-            <div class="row">
+            <div class="row col-sm">
                 <div class="col-12 col-md-6 col-lg-4">
                     <h2 class="text-uppercase">Close to nature</h2>
                     <p>perfect opportunity to escape from hustle and bustle of city life and join countrysiden calm, where not only you can stay but can buy fresh organic products inside the farm and can spend time with our friendly cattles under exprience staff supervision which will make your visit more than just summer vacctions.</p>
@@ -74,7 +230,7 @@
             </div>
         </section>
         <!--farm images-->
-    <section class="farm-image" id="gallery">
+    <section class="farm-image flex" id="gallery">
         <div id="image-div-1" class="row hstack gap-3">
             <div class="col col-12 col-md-6 col-lg-4 bg-light border">
             {% load static %} <img src="{% static "dj_app/media/room1.jpg" %}" alt="hotel room with bed and window "  alt="" id="media1" class="media" width="300" height="200" '/> 
@@ -239,11 +395,11 @@
                 <a  href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Find us on instagram (link open in new tab)">Instagram <i class="fab fa-instagram-square fa-fw fa-2x"></i></a>
                 <a  href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Find us on Twitter (link open in new tab)">Twitter <i class="fab fa-twitter fa-fw fa-2x"></i></a>
                 <a  href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Find us on Youtube (link open in new tab)">Youtube <i class="fab fa-youtube fa-fw fa-2x"></i></a>
-                <a href="/form.html"  aria-label="(link to go on contact us page)">Email Us <i class="fas fa-envelope fa-fw fa-2x"></i></a>
             </div>
         </footer>
     </article>
-    <script src="assets/js/script.js" type="text/javascript"></script>
+    <script src="/static/sendemail.js" type="text/javascript"></script>
+    <script src="/static/script.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
