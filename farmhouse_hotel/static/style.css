@@ -1,0 +1,90 @@
+/***<style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*** ------------------------Hero Image zoom effect----------------***
+
+#hero-outer {
+    height: 600px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url(../images/background-image.jpg) no-repeat center center;
+    animation zoom effect on loading pages
+    animation-name: hero-image;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-image {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1)
+    }
+}
+
+
+
+ form.html css style  
+
+#hero-outer1 {
+    height: 600px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+*** footer style *
+
+.link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer{
+    height: 70px;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+*** ------------------------Hero Image form.html----------------***
+
+#hero-outer-form {
+    height: 600px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+#hero-image-form {
+    height: 600px;
+    width: 100%;
+    background: url(../images/form-main.jpg) no-repeat center center;
+*animation zoom effect on loading pages*
+    animation-name: hero-image;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+** contact form**
+
+.center-form{
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+#form{
+    background-color: rgb(200, 232, 234);
+    text-align: center;
+}</style>***/
