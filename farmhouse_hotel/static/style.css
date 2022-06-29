@@ -1,49 +1,128 @@
-/***<style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
 *{
-    margin: 0;
-    padding: 0;
-    border: none;
+    box-sizing:border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-*** ------------------------Hero Image zoom effect----------------***
 
-#hero-outer {
-    height: 600px;
-    width:100%;
+#cover-text{
+    font-size: 130%;
+    font-family: oswald, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    width: 300px;
+    height:200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgba(204, 228, 23, 0.269);
+    bottom: 60px;
+    right: 150px;
+    position: absolute;
+    z-index: 1;
+}
+
+.picture{
+    height: 300px;
+    width: 33%;
     overflow: hidden;
     position: relative;
 }
-#hero-image {
-    height: 600px;
+
+/**-------------adjustment and styling of images in gallery.html-------------- **/
+
+.row{
+    display:flex;
+    column-count: 3;
+    line-height: 30px;
+    column-gap: 2px;
+    box-sizing: border-box;
+    
+    
+}
+.col{
+    flex: 25%;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/** images style from gallery**/
+.media {
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.media:hover{
+    opacity:0.7;
+}
+.picture{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
     width: 100%;
-    background: url(../images/background-image.jpg) no-repeat center center;
-    animation zoom effect on loading pages
-    animation-name: hero-image;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+    height:150%;
+    overflow: auto;
+    background-color:rgb(77, 231, 185);
+    background-color:rgba(77, 231, 185,0.9);
+    
 }
 
-@keyframes hero-image {
-    from{
-        transform: scale(1);
+.picture-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+
+}
+
+.cap{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding:10px 0;
+    height:150px;
+}
+.picture-content, .cap{
+    animation-name:zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom{
+    from{transform: scale(0.1)}
+    to{transform: 0.6}
+}
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3;
+    
+}
+.close:hover,
+.close:focus {
+    color:#bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:700px){
+    .picture-content{
+        width:100%
     }
-    to{
-        transform: scale(1.1)
-    }
 }
 
-
-
- form.html css style  
-
-#hero-outer1 {
-    height: 600px;
-    width:100%;
-    overflow: hidden;
-    position: relative;
-}
-
-*** footer style *
 
 .link {
     text-align: center;
@@ -55,36 +134,3 @@ footer{
     background-color: aliceblue;
     width: 100%;
 }
-
-*** ------------------------Hero Image form.html----------------***
-
-#hero-outer-form {
-    height: 600px;
-    width:100%;
-    overflow: hidden;
-    position: relative;
-}
-#hero-image-form {
-    height: 600px;
-    width: 100%;
-    background: url(../images/form-main.jpg) no-repeat center center;
-*animation zoom effect on loading pages*
-    animation-name: hero-image;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-}
-
-
-
-** contact form**
-
-.center-form{
-    padding-top: 10px;
-    margin: 0 auto;
-    max-width: 70%;
-}
-
-#form{
-    background-color: rgb(200, 232, 234);
-    text-align: center;
-}</style>***/

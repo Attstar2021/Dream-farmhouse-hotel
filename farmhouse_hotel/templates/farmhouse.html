@@ -28,7 +28,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mr-auto">
-                        <li class="active nav-item mr-2"><a href="/farmhouse/template/booking.html">Gallery</a></li>
+                        <li class="active nav-item mr-2"><a href="#gallery">Gallery</a></li>
                         <li class="nav-item mr-2"><a href="/booking.html">Booking</a></li>
                         <li class="nav-item mr-2"><a href="#contact">Contact Us</a></li> 
                      </ul>
@@ -50,10 +50,9 @@
     </ul>
   </div>
   </section>
-        <section id="hero-outer">
-            {% load static %} <img src="{% static "dj_app/media/background-image1.jpg" %}" alt="green valley with houses" class='container img-fluid'/>
+        <section>
+            {% load static %} <img src="{% static "dj_app/media/background-image1.jpg" %}" alt="green valley with houses" class='container '/>
             
-            <div id="hero-image"></div>
         </section>
         <section class="farmhouse-intro">
             <div class="row">
@@ -74,6 +73,140 @@
                 </div>
             </div>
         </section>
+        <!--farm images-->
+    <section class="farm-image" id="gallery">
+        <div id="image-div-1" class="row hstack gap-3">
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+            {% load static %} <img src="{% static "dj_app/media/room1.jpg" %}" alt="hotel room with bed and window "  alt="" id="media1" class="media" width="300" height="200" '/> 
+            </div>
+            <div id="picture1" class="picture ">
+                <span class="close close1">&times;</span>
+                <img class="pic-content" id="img1">
+                <div id="caption1" class="cap"></div>
+            </div>
+            <div class="col col-12 d-md-none d-lg-block col-lg-4bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/room2.jpg" %}"  alt="hotal room with window" id="media2" class="media" width="300" height="200" '/>  
+            </div>
+            <div id="picture2" class="picture">
+                <span class="close close2">&times;</span>
+                <img class="pic-content" id="img2">
+                <div id="caption2" class="cap"></div>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/toilet1.jpg" %}"  alt="hotal toilet with bathtub" id="media3" class="media" width="300" height="200" '/>  
+            </div>
+            <div id="picture3" class="picture">
+                <span class="close close3">&times;</span>
+                <img class="pic-content" id="img3">
+                <div id="caption3" class="cap"></div>
+            </div>
+        </div>
+        <div id="image-div-2" class="row hstack gap-3">
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/toilet2.jpg" %}"  alt="toilet with bathtub" id="media4" class="media" width="300" height="200" '/>   
+            </div>
+            <div id="picture4" class="picture">
+                <span class="close close4">&times;</span>
+                <img class="pic-content" id="img4">
+                <div id="caption4" class="cap"></div>
+            </div>
+            <div class="col col-12 d-md-none d-lg-block col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm-house.jpg" %}"  alt="farmhouse reception" id="media5" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture5" class="picture">
+                <span class="close close5">&times;</span>
+                <img class="pic-content" id="img5">
+                <div id="caption5" class="cap"></div>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm8.jpg" %}"  alt="feilds with fences" id="media6" class="media" width="300" height="200" '/>   
+            </div>
+            <div id="picture6" class="picture">
+                <span class="close close6">&times;</span>
+                <img class="pic-content" id="img6">
+                <div id="caption6" class="cap"></div>
+            </div>
+        </div>
+        <div id="image-div-3" class="row hstack gap-3">
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm7.jpg" %}"  alt="green fields" id="media7" class="media" width="300" height="200" '/>  
+            </div>
+            <div id="picture7" class="picture">
+                <span class="close close7">&times;</span>
+                <img class="pic-content" id="img7">
+                <div id="caption7" class="cap"></div>
+            </div>
+            <div class="col col-12 d-md-none d-lg-block col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm6.jpg" %}"  alt="green fields" id="media8" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture8" class="picture">
+                <span class="close close8">&times;</span>
+                <img class="pic-content" id="img8">
+                <div id="caption8" class="cap"></div>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm5.jpg" %}"  alt="fields with sheeps" id="media9" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture9" class="picture">
+                <span class="close close9">&times;</span>
+                <img class="pic-content" id="img9">
+                <div id="caption9" class="cap"></div>
+            </div>
+        </div>
+        <div id="image-div-4" class="row hstack gap-3">
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm4.jpg" %}"  alt="barn" id="media10" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture10" class="picture">
+                <span class="close close10">&times;</span>
+                <img class="pic-content" id="img10">
+                <div id="caption10" class="cap"></div>
+            </div>
+            <div class="col col-12 d-md-none d-lg-block col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm3.jpg" %}"  alt="tractor working in fields" id="media11" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture11" class="picture">
+                <span class="close close11">&times;</span>
+                <img class="pic-content" id="img11">
+                <div id="caption11" class="cap"></div>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/farm1.jpg" %}"  alt="horses grazing near barn" id="media12" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture12" class="picture">
+                <span class="close close12">&times;</span>
+                <img class="pic-content" id="img12">
+                <div id="caption12" class="cap"></div>
+            </div>
+        </div>
+        <div id="image-div-5" class="row hstack gap-3">
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/cow1.jpg" %}"  alt="cows in fields" id="media13" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture13" class="picture">
+                <span class="close close13">&times;</span>
+                <img class="pic-content" id="img13">
+                <div id="caption13" class="cap"></div>
+            </div>
+            <div class="col col-12 d-md-none d-lg-block col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/sheep.jpg" %}"  alt="sheeps in the field" id="media14" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture14" class="picture">
+                <span class="close close14">&times;</span>
+                <img class="pic-content" id="img14">
+                <div id="caption14" class="cap"></div>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-4 bg-light border">
+                {% load static %} <img src="{% static "dj_app/media/chicken.jpg" %}"  alt="chicken sitting on farmhouse wall" id="media15" class="media" width="300" height="200" '/>    
+            </div>
+            <div id="picture15" class="picture">
+                <span class="close close15">&times;</span>
+                <img class="pic-content" id="img15">
+                <div id="caption15" class="cap"></div>
+            </div>
+        </div>
+<!--farm images finish here-->
+    </section>
         <section id="contact">
             <div class="center-form text-center " >
                 <form onsubmit="return sendMail(this);" class="container-fluid" id="form">

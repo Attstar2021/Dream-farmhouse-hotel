@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-# every app have their url configration (just to remember)
+
+# every app have their url configration 
+
 urlpatterns = [
     path('', include('farmhouse_hotel.urls')),
     path('admin/', admin.site.urls),   
      
 ]
 
-urlpatterns += staticfiles_urlpatterns()
+
